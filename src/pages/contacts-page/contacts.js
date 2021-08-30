@@ -4,13 +4,13 @@ import './contacts.styles.scss'
 const Contacts = () => {
   return (
     <div className='information'>
-      <div class='information__box'>
-        <a href='https://t.me/Tlatoany' target='_blank'>@Tlatoani </a>
-        <i class="fab fa-telegram-plane"></i>
+      <div className='information__box'>
+        <i className="fab fa-telegram-plane"></i>
+        <a href='https://t.me/Tlatoany' target='_blank'> Tlatoani </a>
       </div>
-      <div class='information__box'>
-        <a href="mailto:noticethatred@gmail.com" target='_blank'>noticethatred@gmail.com </a>
-        <i class="fas fa-at"></i>
+      <div className='information__box'>
+        <i className="fas fa-at"></i>
+        <a href="mailto:noticethatred@gmail.com"> noticethatred@gmail.com </a>
       </div>
     </div>
   )
