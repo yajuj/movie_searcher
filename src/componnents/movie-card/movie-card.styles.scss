@@ -1,0 +1,41 @@
+.movie-card {
+  color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-color: #373b69;
+  overflow: hidden;
+  position: relative;
+  & .image-container {
+    border-radius: 5px;
+    position: relative;
+    & img {
+      width: 100%;
+    }
+    & .title {
+      text-align: center;
+      padding: 5px;
+      font-size: 24px;
+      font-weight: bold;
+     }
+  }
+
+  & .vote-overage {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 99;
+    font-size: 16px;
+  }
+  & .toogle-faves {
+    font-size: 16px;
+    position: absolute;
+    top: 10px;
+    z-index: 99;
+    padding: 5px 10px;
+    left: 10px;
+    cursor: pointer;
+    transition: color 400ms ease-in-out;
+  }
+}

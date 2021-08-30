@@ -1,0 +1,57 @@
+.movie-page {
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  margin-bottom: 30px;
+ 
+  & .movie-page__content{
+    
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    @media screen and (max-width:400px) {
+      width: unset;
+      padding: 10px;
+    }
+    
+    
+    & .poster-container {
+      position: relative;
+      margin-top: 10px;
+      @media screen and (max-width:410px) {
+      align-items: center;
+      }
+      
+      & .vote-average {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+
+      & .toogle-faves {
+        font-size: 16px;
+        position: absolute;
+        top: 10px;
+        z-index: 99;
+        padding: 5px 10px;
+        left: 10px;
+        cursor: pointer;
+        transition: color 400ms ease-in-out;
+      }
+    }
+  }
+
+  & .overview {
+    width: 50%;
+    @media screen and (max-width:840px) {
+      width: 80%;
+  }
+  }
+
+  
+}
