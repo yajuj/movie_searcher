@@ -15,7 +15,6 @@ const MainPage = () => {
   useEffect(() => {
     if (page != 1) {
       dispatch(fetchCollectionsStartAsync(filter, page))
-
     }
   }, [page])
 
@@ -24,7 +23,7 @@ const MainPage = () => {
       dispatch(fetchCollectionsStartAsync())
     }
     document.addEventListener('scroll', scrollHandler)
-    return () => { document.removeEventListener('scroll', scrollHandler); console.log('unsuv'); }
+    return () => { document.removeEventListener('scroll', scrollHandler) }
   }, [])
 
   const scrollHandler = (e) => {
