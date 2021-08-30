@@ -4,12 +4,16 @@ import thunk from 'redux-thunk';
 import favReducer from "./favs/fav.reducer";
 import movieReducer from "./movie/movie.reducer";
 
+const middleweres = [thunk];
+
+if (process.env.NODE_ENV === 'development') {
+  middleweres.push(logger)
+}
+
 const rootReducer = combineReducers({
   movie: movieReducer,
   fav: favReducer
 })
-
-const middleweres = [thunk, logger];
 
 const store = createStore(rootReducer, applyMiddleware(...middleweres))
 
