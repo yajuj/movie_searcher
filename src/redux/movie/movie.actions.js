@@ -26,7 +26,6 @@ export const fetchCollectionsStartAsync = (query = '', page = 1) => async dispat
     } else if (!query) {
       const data = await fetch(`${URL}discover/movie?&${API_KEY}&page=${page}`);
       const { results } = await data.json();
-      //there is a bug
       dispatch(
         page !== 1 ?
           addCollectionsSuccess({ collections: results })
